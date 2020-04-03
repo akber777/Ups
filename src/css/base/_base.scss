@@ -1,0 +1,53 @@
+*{
+	box-sizing:border-box;
+	list-style:none;
+	padding:0;
+	margin: 0;
+	text-decoration: none !important;
+	outline:0 !important;
+}
+html{ 
+	width: 100%;
+	font-size: 62.5%; //burda rem'in 10 piksel olmasını ayarladık ki rahat değer verebilelim tarayıcı 16 piksel veriyor biz onun 62.5 faizini alarak 10 yaptık
+
+	/* @include respondmax(md){
+		font-size: 40%;
+	} 
+
+	@include respondmin(md){
+		font-size: 40%;
+	} 
+
+	@include respondmin(lg){
+		font-size: 56.25%; 
+	} 
+
+	@include respondmin(xl){
+		font-size: 62.5% ; //1rem=12px
+	}		 */
+
+}
+
+body{
+	position: relative;
+	float: left;
+	width: 100%;
+	box-sizing: border-box;
+
+}
+
+
+main{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+
+.full{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+

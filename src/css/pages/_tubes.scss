@@ -1,0 +1,114 @@
+.tubes{
+	
+	margin-bottom: 50px;
+
+	&__ImgBox{
+
+		padding-right: 30px;
+
+
+		@include respondmax(lg)
+		{
+			width: 100%;
+			padding-right: 0;
+		}
+		
+
+		&:after{
+			position: absolute;
+			content: "";
+			background-color: #C8C5C5;
+			width:2px;
+			height: 70%;
+			top: 0;
+			right: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+
+
+			@include respondmax(lg)
+			{
+				display: none;
+			}
+
+		}
+
+
+	}
+	
+	&__content
+	{
+
+		top: 50%;
+
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		padding-bottom: 30px;
+
+
+		span{
+			position: absolute;
+			@include font($pm,53px,#D9D8D8);
+			transform: rotate(90deg);
+			right: 0;
+
+
+			@include respondmax(lg)
+			{
+				display: none;
+			}
+		}
+
+		p{
+			width: 89%;
+
+
+			@include respondmax(xl)
+			{
+				width: 77%;
+			}
+
+
+			@include respondmax(lg)
+			{
+				width: 100%;
+			}
+
+		}
+
+
+		h4{
+			@include font($ps,53px,#122887);
+			font-weight: 600;
+			margin-bottom: 40px;
+			width: 89%;
+
+
+			@include respondmax(lg)
+			{
+				width: 100%;
+				font-size: 37px;
+				margin-top: 20px;
+			}
+
+			
+			@include respondmax(lg)
+			{
+				font-size: 20px;
+			}
+
+		}
+
+
+	}
+	
+
+
+}

@@ -1,0 +1,162 @@
+.products{
+
+
+	&__layout{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color:rgba(0, 0, 0, 0.7);
+		z-index: 10;
+		clip-path: polygon(0 0, 73% 0, 57% 100%, 0% 100%);
+
+		@include respondmax(lg){
+
+			clip-path:unset;
+
+		}
+
+	}
+
+
+
+	&__rightImg{
+		position: absolute;
+		width: 60%;
+		height: 550px;
+		right: 0;
+		z-index: 10;
+		object-fit:contain;
+
+
+		@include respondmax(lg){
+
+			display: none;
+
+		}
+	}
+
+
+
+	&__clipPath{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		clip-path: polygon(0 0, 73% 0, 57% 100%, 0% 100%);
+		object-fit: cover;
+
+		@include respondmax(lg){
+
+			clip-path:unset;
+
+		}
+	}
+
+
+	&__title{
+		
+		margin-bottom: 116px;
+
+		
+		@include respondmax(lg)
+		{
+			margin-bottom: 0;
+		}
+
+		&--content{
+			height: 484px;
+
+
+			@include respondmax(sm)
+			{
+				height: 284px;
+			}
+
+
+			@include respondmax(sm480)
+			{
+				height: 120px;
+			}
+
+		}
+
+
+
+		h4{
+			position: absolute;			
+			z-index: 50;
+			width:auto;
+			@include font($pm,60px,#fff);
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			
+
+			@include respondmax(xl1457)
+			{
+				@include font($pm,40px,#fff);
+			}
+
+			@include respondmax(sm)
+			{
+				@include font($pm,40px,#fff);
+			}
+
+
+			@include respondmax(sm480)
+			{
+				@include font($pm,20px,#fff);
+			}
+
+
+
+			&:before{
+				
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 10px;
+				width: 100%;
+				height: 27px;
+				background-color: #FACF3B;
+				z-index: -1;
+
+				@include respondmax(sm)
+				{
+					display: none;
+				}
+
+
+			};
+
+
+		}
+	}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+.product__header{
+	height: 240px !important;
+
+
+	@include respondmax(lg)
+	{
+		height: 100px !important;
+		padding:15px 0;
+	}
+
+}

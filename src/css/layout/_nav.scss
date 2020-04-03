@@ -1,0 +1,190 @@
+.nav{
+	
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+
+
+	@include respondmax(lg){
+
+		justify-content: flex-end;
+
+	}
+
+
+	&__ul{
+		
+		position: relative;
+		float: left;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		@include respondmax(lg){
+
+			display: none;
+
+		}
+
+
+	}
+
+
+	&__social{
+		position: relative;
+		float: left;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		@include respondmax(lg){
+
+			display: none;
+
+		}
+
+		
+		li{
+
+			position: relative;
+			float: left;
+
+			&:not(:last-child)
+			{
+
+				margin-right: 12px;
+
+			};
+			
+
+			svg{
+				@include font($pr,17px,#021A7F);
+				transition: all 0.3s;
+				
+				
+				&:hover{
+					
+					transform: scale(1.2);
+					transition: all 0.3s;
+
+				};
+
+			}
+
+
+		}
+
+	}
+
+
+
+	&__contact{
+		position: relative;
+		float: left;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+
+
+		@include respondmax(lg)
+		{
+			display: none;
+		}
+
+
+		li{
+
+
+			a{
+				
+				position: relative;
+				float:left;
+				text-align: right;
+				width: 100%;
+				@include font($pr,14px,#021A7F);
+				font-weight: 600;
+				transition: all 0.3s;
+
+
+
+				&:before{
+
+					position: absolute;
+					content: attr(data-contact);
+					bottom: -15px;
+					right: 0;
+					@include font($pr,9px,#FF0000);
+					transition: all 0.3s;
+
+
+				}
+
+				&:after{
+					position: absolute;
+					content: "";
+					width: 50%;
+					height: 1px;
+					background-color: red;
+					right: 0;
+					bottom: -15px;
+					transition: all 0.3s;
+
+				};
+
+
+				&:hover:after{			
+					
+					background-color:#021A7F;
+					transition: all 0.3s;
+					
+				};
+
+				&:hover:before{			
+					
+					color:#021A7F;
+					transition: all 0.3s;
+				};
+
+			}
+
+		}
+	}
+
+
+	&__item{
+		position: relative;
+		float: left;
+
+		&:not(:last-child)
+		{
+			margin-right: 36px;
+		}
+
+
+		a{
+			
+			position: relative;
+			float: left;
+			@include font($pr,14px,#00197E);
+			text-transform: uppercase;
+			transition:all 0.3s;
+			font-weight: 600;
+
+
+			&:hover{
+				
+				color:#FACF3B;
+				transition:all 0.3s;
+
+			};
+
+		}
+	}
+
+
+
+
+
+
+}

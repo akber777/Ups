@@ -1,0 +1,158 @@
+.productsContent{
+
+	
+	&__boxes{
+
+		img{
+			position: relative;
+			float: left;
+			height: 100%;
+			width: 100%;
+		}
+
+
+		p{
+			position: relative;
+			float: left;
+			width: 50%;
+			@include font($pm,18px,#000000);
+
+			
+
+			@include respondmax(lg)
+			{
+				width: 100%;
+			}
+
+
+
+			&:before{
+
+				position: absolute;
+				content: attr(data-panel);
+				@include font($pm,40px,#C8C5C5);
+				transform:rotate(90deg);
+				right: -210px;
+				top: 270px;
+
+
+				@include respondmax(lg)
+				{
+					display: none;
+				}
+			}
+
+		}
+
+
+
+	}
+
+
+
+	&__characteristic{
+		margin-top: 30px;
+		margin-bottom: 50px;
+		
+		h4{
+			position: relative;
+			float: left;
+			@include font($pm,50px,#122887);
+			font-weight: 500;
+
+			@include respondmax(lg)
+			{
+				@include font($pm,25px,#122887);
+				text-align: center;
+			}
+
+
+			&:after{
+				
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 10px;
+				width: 100%;
+				height: 20px;
+				background-color: #FACF3B;
+				z-index: -1;
+				
+				@include respondmax(lg)
+				{
+					display: none;
+				}
+
+			};
+
+		}
+
+
+
+	}
+
+
+
+	&__table{
+		margin-top: 15px;
+
+		table{
+			width: 60%;
+
+
+			@include respondmax(lg)
+			{
+				width: 100%;
+			}
+			
+			tr{
+				position: relative;
+				float: left;
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			th{
+				position: relative;
+				float: left;
+				width: 50%;
+				@include font($pm,16px,#000000);
+				text-align: left;
+				padding-left: 30px;
+				background-color: #F7F6FB;
+
+				@include respondmax(lg)
+				{	
+					@include font($pm,12px,#000000);
+				}
+			}
+
+
+			td{
+				position: relative;
+				float: left;
+				width: 50%;
+				background-color:#122887;
+				@include font($pm,16px,#fff);
+				text-align: left;
+				padding-left: 30px;
+
+
+				@include respondmax(lg)
+				{	
+					@include font($pm,12px,#fff);
+				}
+
+			}
+
+		}
+
+
+
+	}
+
+
+
+
+
+}

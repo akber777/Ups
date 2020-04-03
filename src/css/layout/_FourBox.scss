@@ -1,0 +1,227 @@
+.FourBox{
+
+	background-color:#F5F5F5;
+
+
+
+	&__container{
+
+		padding:0 139px;
+		padding-top: 252px;
+		padding-bottom: 117px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+
+		@include respondmax(xl60){
+
+			padding: 252px 29px 117px;
+
+		}
+
+
+		@include respondmax(xl){
+
+			padding: 252px 29px 0px;
+
+		}
+
+
+		@include respondmax(sm)
+		{
+			padding: 199px 10px 0px;
+		}
+
+	}
+
+
+	&__content{
+		position: relative;
+		width:calc((100% / 4) - 20px);
+		background-color: #FFFFFF;
+		height: 430px;
+		padding:0 20px;
+
+
+
+		@include respondmax(xl){
+
+			width: calc((100% / 2) - 20px);
+			margin-bottom: 80px;
+
+		}
+
+		@include respondmax(md){
+
+			width:100%;
+
+		}
+
+		&:nth-child(even){
+
+			margin-top: 120px;
+
+
+			&:not(:last-child){
+				@include respondmax(md){
+
+					margin-bottom: 213px;
+
+				}
+			}
+
+		};
+
+
+
+
+		&:before{
+			
+			position:absolute;
+			content: "";
+			right: 0px;
+			bottom: 0px;
+			width:20px;
+			height:20px;
+			background-color:#021A7F;
+			z-index: 1;
+			transition: all 0.3s;
+
+		};
+
+
+		&:hover:before{
+
+			width: 100%;
+			height: 5px;
+			transition: all 0.3s;
+
+		};
+
+
+	}
+
+
+
+	&__ContentIn{
+		position:absolute;
+		width: 80%;
+		height: 549px;
+		top: -129px;
+		transition: all 0.5s;
+
+
+		@include respondmax(md){
+
+			width:92%;
+
+		}
+
+
+
+		a{
+			position: relative;
+			float: left;
+			z-index: 2;
+			transition: all 0.5s;
+
+
+
+			&:hover img{
+				transition: all 0.5s;
+				transform: scale(1.1);
+
+			};
+		}
+	}
+
+
+	&__contentImg{
+		
+		@include respondmax(sm)
+		{
+			overflow:hidden;
+		}
+		
+		img{
+			height: 298px;
+			transition: all 0.5s;
+		}
+
+
+		&:after{
+			
+			position:absolute;
+			content: "";
+			left: 15px;
+			top: -15px;
+			width:100%;
+			height:100%;
+			background-color:#021A7F;
+			z-index: -1;
+
+
+			@include respondmax(sm)
+			{
+				left: 8px;
+				top: -8px;
+			}
+
+		};
+
+	}
+
+
+	&__title{
+
+		padding-top: 25px;
+		padding-bottom: 20px;
+
+		h4{
+			position:relative;
+			float: left;
+			width: 100%;
+			line-height: 30px;
+			@include font($pl2,22px,#021A7F);
+
+			span{
+				position: relative;
+				float: left;
+				width: 100%;
+				@include font($ps,22px,#021A7F);
+				font-weight: 600;
+
+			}
+
+
+
+			&:after{
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: -10px;
+				width: 100%;
+				height: 2px;
+				background-color: #021A7F;
+
+
+			};
+
+		}
+
+	}
+
+
+	&__text{
+
+		p{
+			@include font($pl,12px,#021A7F);
+			height: 127px;
+			overflow: hidden;
+
+		}
+	}
+
+
+}

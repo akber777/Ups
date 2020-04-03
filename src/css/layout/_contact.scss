@@ -1,0 +1,310 @@
+.contact{
+
+	height: 972px;
+	background-color: #fff;
+
+
+
+	@include respondmax(xl)
+	{
+		height: unset;
+	}
+
+	
+	&__container{
+		height: 100%;
+		padding: 0 181px;
+		padding-bottom: 0;
+		padding-right: 0;
+
+
+
+		@include respondmax(xl60){
+
+			padding:20px;
+
+		}
+
+
+	}
+
+
+
+	&__logo{
+		position: relative;
+		float: left;
+		width: 100%;
+
+
+		@include respondmax(xl)
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	
+
+	&__left{
+		position: relative;
+		float: left;
+		width: 35%;
+		height: 100%;
+		padding-bottom: 63px;
+		padding-top: 74px;
+
+
+		@include respondmax(xl1616){
+
+			width: 45%;
+
+
+		}
+
+
+		@include respondmax(xl80)
+		{
+			width: 50%;
+		}
+
+
+		@include respondmax(xl)
+		{
+			width: 100%;
+			padding-top: 15px;
+		}
+		
+		
+		
+	}
+
+
+	&__form{
+		position: relative;
+		float: left;
+		width: 516px;
+		margin-top: 99px;
+		-webkit-box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.38);
+		-moz-box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.38);
+		box-shadow: 0px 1px 12px 0px rgba(0,0,0,0.38);
+		z-index: 10;
+		padding-bottom: 20px;
+
+
+		@include respondmax(xl)
+		{
+			width: 100%;
+			margin-top: 35px;
+
+		}
+
+		&:after{
+			
+			position: absolute;
+			content: "";
+			width: 200px;
+			height: 100px;
+			background-color: #FACF3B;
+			right:-10px;
+			top: -10px;
+			z-index: -1;
+
+			@include respondmax(xl)
+			{
+				display: none;
+			}
+
+
+		};
+
+	}
+
+	&__ul{
+
+		background-color: #fff;
+	}
+
+	&__ul li{
+		position: relative;
+		float: left;
+		width: 100%;
+		padding:0 30px;
+
+
+		&:last-child{
+
+			
+			margin-top: 20px;
+
+
+			button{
+				width: 150px;
+				padding:5px 0;
+				background-color: #021A7F;
+				border: none;
+				border-radius: 3px;
+				color: #fff;
+				@include font($ps,16px,#fff);
+				transition: all 0.5s;
+				font-weight: 600;
+
+
+
+				&:hover{
+					
+					background-color: #FACF3B;
+					transition: all 0.5s;
+					color: #021A7F;
+
+				};
+
+			}
+
+		};
+
+		input,textarea{
+			position: relative;
+			float: left;
+			width: 100%;
+			margin-top: 20px;
+			padding:0 20px;
+			@include font($pl2,20px,#000000);
+			border:none;
+			border-bottom: 1px solid #707070;
+		}
+
+		input{
+			height: 50px;
+
+			&:focus::placeholder{
+				
+				@include font($pl2,20px,#000000);
+			}
+
+
+			&:focus{
+				
+				border-bottom: 1px solid #000000;
+			}
+		}
+
+		textarea{
+			height: 176px;
+			resize: none;
+
+			&:focus::placeholder{
+				
+				@include font($pl2,20px,#000000);
+			}
+
+
+			&:focus{
+				
+				border-bottom: 1px solid #000000;
+			}
+		}
+
+		input::placeholder{
+			
+			@include font($pl2,20px,#707070);
+			
+		};
+
+		textarea::placeholder{
+			
+			@include font($pl2,20px,#707070);
+
+			
+		};
+	}
+	
+	&__title{
+		margin-top: 82px;
+		z-index: 5;
+
+
+		@include respondmax(xl)
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top:23px;
+		}
+
+		h4{
+			position: relative;
+			float: left;
+			@include font($ps,55px,#021A7F);
+			font-weight: 600;
+			
+			&:after{
+
+				position: absolute;
+				left: 0;
+				bottom: 10px;
+				content: "";
+				width: 100%;
+				height: 20px;
+				background-color: #FACF3B;
+				z-index: -1;
+
+			};
+
+			
+			@include respondmax(sm480)
+			{
+				@include font($pl2,31px,#021A7F);
+			}
+			
+			span{
+				position: relative;
+				@include font($pl2,55px,#021A7F);
+				font-weight: normal;
+
+				@include respondmax(sm480)
+				{
+					@include font($pl2,31px,#021A7F);
+				}
+			}
+		}
+
+
+	}
+
+	// right contact
+
+
+	&__right{
+		position: relative;
+		float: left;
+		width:65%;
+		height: 100%;
+
+
+		@include respondmax(xl1616){
+
+			width: 55%;
+
+		}
+
+		
+
+		@include respondmax(xl80)
+		{
+			width: 50%;
+		}
+
+
+		@include respondmax(xl)
+		{
+			width: 100%;
+			height: 300px;
+		}
+
+	}
+
+
+
+
+}

@@ -1,0 +1,97 @@
+.footer{
+
+	background-color: #2A2A2A;
+	padding:45px 0;
+
+	zoom:80%;
+
+
+	@include respondmax(sm)
+	{
+		padding-bottom: 0;
+
+	}
+	
+
+	.footerLogo{
+
+		@include respondmax(sm)
+		{
+			width: 113px;
+		}
+
+
+	}
+
+
+	&__menuBox{
+
+		display: flex;
+		justify-content: space-between;
+
+
+		@include respondmax(lg){
+
+			margin-top: 53px;
+			flex-direction: column;
+
+		}
+
+		
+		&--content{
+			position: relative;
+			float: left;
+			width: calc((100% / 3) - 10px);
+
+
+			@include respondmax(lg){
+
+				margin-bottom: 40px;
+				width: 100%;
+
+			}
+			
+			h4{
+				@include font($ps,27px,#FFFFFF);
+				margin-bottom: 20px;
+				font-weight: 600;
+
+				&:after{
+					
+					position: absolute;
+					content: "";
+					width: 50px;
+					height: 5px;
+					left: 0;
+					bottom: -10px;
+					background-color:#FACF3B;
+
+				};
+
+
+				@include respondmax(sm)
+				{
+					@include font($ps,22px,#FFFFFF);
+
+				}
+			}
+
+			span{
+				@include font($pl2,16px,#FFFFFF);
+				transition: all 0.5s;
+
+
+
+				&:hover{
+					color:#FACF3B;
+					transition: all 0.5s;
+
+				};
+			}
+
+		}
+
+
+	}
+
+}

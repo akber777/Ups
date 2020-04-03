@@ -1,0 +1,272 @@
+.whoUs{
+	
+
+
+	&__Container{
+		padding-bottom: 60px;
+	}
+
+
+	&__Content{
+		margin-bottom:60px;
+		margin-top: 60px;
+	}
+	
+
+	&__text{
+		padding:0 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+
+		h4{
+			text-align: right;
+			@include font($pr,45px,#fff);
+			position: relative;
+			float:right;
+			width: 100%;
+
+
+			@include respondmax(sm)
+			{
+				@include font($pr,25px,#fff);
+			}
+
+
+			&:after{
+
+				position: absolute;
+				content:"";
+				width: 200px;
+				height: 5px;
+				background-color: #fff;
+				right: 0;
+				bottom: -10px;
+
+
+				@include respondmax(sm)
+				{
+					width: 40%;
+				}
+
+			};
+		}
+
+		p{	
+			position: relative;
+			float: left;
+			width: 100%;
+			text-align: right;
+			@include font($pr,16px,#fff);
+			margin-top: 20px;
+		}
+
+		background-color: #021A7F;
+		height: 389px;
+
+
+		@include respondmax(lg)
+		{
+			height:auto;
+			padding:30px;
+		}
+
+	}
+
+
+
+
+	&__text2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #FACF3B;
+		height: 389px;
+		h4{
+			text-align: left;
+			@include font($pr,45px,#000000);
+			width: 100%;
+			position: relative;
+			float:left;
+			padding-left: 0;
+
+
+			@include respondmax(sm)
+			{
+				@include font($pr,25px,#000000);
+			}
+
+
+			&:after{
+
+				position: absolute;
+				content:"";
+				width: 200px;
+				height: 5px;
+				background-color: #000000;
+				left: 0;
+				bottom: -10px;
+
+				@include respondmax(sm)
+				{
+					width: 40%;
+				}
+
+			};
+		}
+
+		p{	
+			position: relative;
+			float: left;
+			width: 100%;
+			text-align: left;
+			@include font($pr,16px,#000000);
+			margin-top: 20px;
+		}
+
+
+		@include respondmax(lg)
+		{
+			height:auto;
+			padding:30px;
+		}
+	}
+
+
+
+	&__titleBox{
+		margin-top: -100px;
+		
+		@include respondmax(lg)
+		{
+			margin-bottom: 144px;
+		}
+
+
+		@include respondmax(sm)
+		{
+			margin-top: -47px;
+		}
+
+		h4{	
+			position: relative;
+			z-index: 2;
+
+			@include font($am,76px,#fff);
+
+
+			@include respondmax(sm)
+			{
+				@include font($am,35px,#fff);
+			}
+
+			&:before{
+
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 10px;
+				width: 100%;
+				height: 27px;
+				background-color: #FACF3B;
+				z-index: -1;
+
+				@include respondmax(sm)
+				{
+					display: none;
+				}
+
+			};
+		}
+
+		span{
+			@include font($am,76px,#fff);
+			font-weight: 200;
+
+			@include respondmax(sm)
+			{
+				@include font($am,35px,#fff);
+			}
+		}
+
+		p{
+			margin-top: 20px;
+			@include font($pl2,16px,#000000);
+		}
+
+	}
+
+
+	&__leftContent{
+		height: 389px;
+		overflow: hidden;
+
+
+		&:hover img{
+
+			transform: scale(1.1);
+			transition: all 0.5s;
+
+		};
+
+		img{
+			position: relative;
+			float: left;
+			height: 100%;
+			width: 100%;
+			transition: all 0.5s;
+		}
+	}
+
+
+
+	&__ImgBox{
+		height: 389px;
+		margin-top: -100px;
+
+
+		&:before{
+
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			right: -10px;
+			top: -15px;
+			background-color: #fff;
+			-webkit-box-shadow: 0px 0px 11px 7px rgba(0,0,0,0.15);
+			-moz-box-shadow: 0px 0px 11px 7px rgba(0,0,0,0.15);
+			box-shadow: 0px 0px 11px 7px rgba(0,0,0,0.15);
+
+		};
+		
+		img{
+			position: relative;
+			float: left;
+			width: 100%;
+			height: 100%;
+			object-fit:cover;
+		}
+
+	}
+
+	
+
+
+}
+
+
+
+
+.aboutUs{
+
+
+	@include respondmax(sm)
+	{
+		height: 196px !important;
+	}
+
+
+
+}

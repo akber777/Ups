@@ -1,0 +1,100 @@
+.TablePipes{
+	
+
+	@include respondmax(md)
+	{
+		overflow-x:scroll;
+	}
+
+	table{
+		thead{
+			position: relative;
+
+			&:after{
+				
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 25px;
+				background-color: #122887;
+				top: 34px;
+				left: 0;
+
+
+				@include respondmax(md)
+				{
+					display: none;
+				}
+
+			};
+			
+			th{
+				text-align: center;
+				@include font($ps,14px,#122887);
+			}
+
+			background-color:#FACF3B;
+
+		}
+
+		
+		tbody{
+
+			tr:first-child{
+				height: 20px;
+				border:1px solid black;
+
+				@include respondmax(md)
+				{
+					display: none;
+				}
+			}
+
+			th,td{
+				text-align: center;
+				color: #122887;
+				@include font($ps,14px,#122887);
+			}
+
+
+		}
+
+
+	}
+	
+
+}
+
+
+
+.allTubess .AddAfter:not(:last-child):after{
+
+	position: absolute;
+	content: "";
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #C4C4C4;
+
+};
+
+
+
+
+.allTubess section:last-child{
+	
+	margin-bottom:100px;
+	padding: 25px 150px;
+
+	@include respondmax(lg)
+	{
+		padding: 25px 47px;
+	}
+
+
+	@include respondmax(sm)
+	{
+		padding: 25px 13px;
+	}
+};

@@ -1,0 +1,183 @@
+.product{
+	padding:50px 0;
+
+
+	@include respondmax(sm)
+	{
+		padding:0;
+	}
+
+
+	&__title{
+		
+		margin-bottom: 45px;
+
+		h4{
+			position: relative;
+			float: left;
+			@include font($pm,67px,#021A7F);
+
+
+			@include respondmax(md){
+
+				@include font($pm,46px,#021A7F);
+
+			}
+
+			&:after{
+
+				position: absolute;
+				left: 0;
+				bottom: 10px;
+				content: "";
+				width: 100%;
+				height: 27px;
+				background-color: #FACF3B;
+				z-index: -1;
+
+			};
+
+		}
+
+
+	}
+
+
+
+	
+	&__boxContainer{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+
+
+	&__boxIn{
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		align-items: center;
+		z-index: 10;
+
+
+		img{
+			position: relative;
+			float: left;
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+
+	&__contentBox{
+		position: relative;
+		float: left;
+		width: 300px;
+		height: 200px;
+		background-color:#021A7F;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding:0 20px;
+		margin-bottom: 60px;
+		cursor: pointer;
+		transition: 0.5s;
+		overflow: hidden;
+
+
+		@include respondmax(md){
+
+			width: 100%;
+
+		}
+		
+
+
+		&:hover{
+			
+			background-color: unset !important;
+			transition: 0.5s;
+
+		};
+
+
+		&:hover > img{
+			
+			opacity: 1;
+			background: unset;
+			padding:0 !important;
+			transform: scale(1.1);
+			transition: 0.5s;
+
+		};
+
+
+
+		&:hover > .product__boxIn{
+			
+			opacity: 0;
+			transition: 0.5s;
+
+		};
+
+
+
+
+
+		&:nth-child(3n+2)
+		{
+			margin-top: 30px;
+
+			
+			@include respondmax(lg){
+
+				margin-top: 0;
+
+			}
+
+		};
+
+
+
+		&:nth-child(even)
+		{
+			background-color:#FACF3B;
+		};
+
+
+		// &:nth-child(3n)
+		// {
+		// 	display: none;	
+		// };
+		
+
+		> img{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			transition: 0.5s;
+
+		}
+
+		span{
+
+			@include font($pm,25px,#fff);
+			text-align: center;
+		}
+
+	}
+
+
+
+
+
+
+
+
+}

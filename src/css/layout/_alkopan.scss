@@ -1,0 +1,65 @@
+.alkopan{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 240px;
+
+	@include respondmax(lg){
+
+		height: unset;
+		padding:30px 0;
+
+	}
+
+
+	h4{
+		position: relative;
+		float: left;
+		@include font($pm,50px,#122887);
+		font-weight: 500;
+
+
+		@include respondmax(lg){
+
+			@include font($pm,22px,#122887);
+			text-align: center;
+			width: 100%;
+
+		}
+
+
+
+		@include respondmax(sm480){
+
+			@include font($pm,18px,#122887);
+
+		}
+
+
+		&:after{
+
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 10px;
+			width: 100%;
+			height: 20px;
+			background-color: #FACF3B;
+			z-index: -1;
+
+
+			@include respondmax(lg){
+
+				display: none;
+
+			}
+
+
+		};
+
+	}
+
+
+
+}

@@ -1,0 +1,82 @@
+.aboutUs{
+	
+	
+	.nav{
+
+		li{
+			
+			a{
+
+				color: #fff;
+				transition: all 0.5s;
+				
+
+				&:hover{
+					
+					color: #FACF3B;
+					transition: all 0.5s;
+
+				};
+
+			}
+
+
+		}
+
+
+		.nav__social{
+
+			li{
+
+				svg{
+					color: #fff;
+				}
+
+			}
+
+		}
+
+		
+		.nav__contact{
+
+			
+			li{
+
+				
+				a:before{
+
+					color: #fff;
+
+				};
+
+
+				a:after{
+
+					display: none;
+
+				};
+
+
+			}
+
+
+
+		}
+
+
+	}
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+}

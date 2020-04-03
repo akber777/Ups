@@ -1,0 +1,234 @@
+.security{
+
+	.security__boxes:nth-child(even){
+
+		.security__boxes--left{
+			float: left;
+
+		}
+
+
+
+		h4{	
+			position: relative;
+			float: left;
+			@include font($pl2,35px,#122887);
+			z-index: 5;
+			margin-bottom: 20px;
+
+		}
+
+
+		a{
+			@include font($pl2,18px,#000);
+		}
+
+
+		&{
+			background-color: #F7F6FB;
+		}
+	}
+
+
+	&__left{
+		position: relative;
+		float: left;
+		width:50%;
+
+		@include respondmax(lg)
+		{
+			width: 100%;
+		}	
+	}
+
+
+
+	&__right{
+		position: relative;
+		float: left;
+		width:50%;
+		padding:0 30px;
+
+
+		@include respondmax(lg)
+		{
+			width: 100%;
+			margin-top: 25px;
+		}	
+
+		p{
+			position: relative;
+			float: left;
+			width: 100%;
+			@include font($pl2,18px,#000);
+
+
+			@include respondmax(sm)
+			{
+				font-size: 15px;
+			}
+		}
+	}
+
+
+
+	&__boxes{
+		background-color: #122887;
+		height: 300px;
+		margin-top: 151px;
+		margin-bottom: 200px;
+		padding: 20px 0;
+
+
+		@include respondmax(xl)
+		{
+			height: auto;
+		}
+
+
+		@include respondmax(lg)
+		{
+			margin-top: 89px;
+			margin-bottom: 30px;
+		}
+
+		&--left{
+			position: relative;
+			float: left;
+			width: 50%;
+
+
+			@include respondmax(lg)
+			{
+				width: 100%;
+			}
+
+
+			img{
+				position: relative;
+				float: left;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				z-index: 5555;
+				margin-top: -113px;
+			}
+		}
+
+
+
+
+		&--right{
+			position: relative;
+			float: left;
+			width: 50%;
+			padding-left: 60px;
+			
+
+			@include respondmax(lg)
+			{
+				width: 100%;
+				padding-left: 10px;
+			}
+
+			h4{	
+				position: relative;
+				float: left;
+				@include font($pl2,35px,#fff);
+				z-index: 5;
+				margin-bottom: 20px;
+
+
+				@include respondmax(lg)
+				{
+					@include font($pl2,22px,#fff);
+				}
+
+
+				&:after{
+
+					position: absolute;
+					content: "";
+					left: 0;
+					bottom: 10px;
+					width: 100%;
+					height: 24%;
+					background-color: #FACF3B;
+					z-index: -1;
+
+
+					@include respondmax(lg)
+					{
+						display: none;
+					}
+
+				};
+
+			}
+
+		}
+
+	}
+
+
+
+
+	&__ul{
+
+		li{
+			position: relative;
+			float: left;
+			width: 100%;
+			margin-bottom: 10px;
+
+			a{	
+				position: relative;
+				float: left;
+				@include font($pl2,16px,#fff);
+				padding-left: 25px;
+
+
+				@include respondmax(lg)
+				{
+					@include font($pl2,14px,#fff);
+				}
+
+
+				&:after {
+					position: absolute;
+					content: "";
+					left: 0px;
+					width: 10px;
+					height: 10px;
+					border-radius: 100%;
+					background: #FACF3B;
+					top: 50%;
+					-webkit-transform: translateY(-50%);
+					-moz-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					-o-transform: translateY(-50%);
+					transform: translateY(-50%);
+					transition: all .5s;
+				}
+
+			}
+
+		}
+	}
+
+
+
+}
+
+
+
+
+.metal__header{
+	height: 159px!important;
+	
+
+	@include respondmax(sm)
+	{
+		height:103px !important;
+	}
+}

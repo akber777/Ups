@@ -1,0 +1,238 @@
+.tubesAdvantage
+{	
+	
+	
+	z-index: 1;
+	background-color: #F7F6FB;
+	margin-bottom: 200px;
+
+
+	&:after{
+		
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: -200px;
+		width: 100%;
+		height: 3px;
+		background-color:#C4C4C4;
+
+
+	};
+
+
+	&__center{
+		position: relative;
+		float: none;
+		margin: 0 auto;
+		width: 1400px;
+
+
+		@include respondmax(xl1457)
+		{
+			width: 100%;
+			padding:0 40px;
+		}
+
+
+		@include respondmax(sm)
+		{
+			padding:0 19px;
+		}
+
+
+		&--in{
+			padding:51px 0;
+		}
+	}
+
+
+	&__left{
+		position: relative;
+		float:left;
+		width: 70%;
+		padding-right: 100px;
+
+
+		@include respondmax(xl)
+		{
+			width: 100%;
+			padding-right: 0;
+		}
+
+
+		p{
+			position: relative;
+			float: left;
+			width: 100%;
+			@include font($pr,18px,#000);
+			line-height: 30px;
+			margin-top: 20px;
+			height: 210px;
+			overflow: hidden;
+
+		}
+
+		h4{
+			position: relative;
+			float: left;
+			@include font($pl2,35px,#122887);
+
+			@include respondmax(lg)
+			{
+				font-size: 21px;
+			}
+
+			&:after{
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 10px;
+				width: 100%;
+				height: 30%;
+				background-color: #FACF3B;
+				z-index: -1;
+
+
+				@include respondmax(lg)
+				{
+					font-size: 21px;
+					display: none;
+				}
+
+			};
+
+		}
+
+
+
+		h5{
+			position: relative;
+			float: left;
+			@include font($ps,35px,#122887);
+			font-weight: 600;
+
+			&:after{
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 10px;
+				width: 100%;
+				height: 30%;
+				background-color: #FACF3B;
+				z-index: -1;
+
+
+				@include respondmax(lg)
+				{
+					font-size: 21px;
+					display: none;
+				}
+
+			};
+
+
+			@include respondmax(lg)
+			{
+				font-size: 21px;
+			}
+
+
+		}
+
+	}
+
+
+
+	&__right{
+		position: relative;
+		float:left;
+		width: 30%;
+
+
+		@include respondmax(xl)
+		{
+			width: 100%;
+		}
+
+		
+		&--img{
+			height: 250px;
+
+			img{
+				position: relative;
+				float:left;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+
+
+
+		&--content{
+			background-color: #122887;
+			padding:15px 25px;
+			margin-bottom: -155px;
+			
+
+			h4{	
+				position: relative;
+				float:left;
+				width:auto;
+				@include font($pl2,35px,#fff);
+				z-index: 1;
+
+
+				&:after{
+					position: absolute;
+					content: "";
+					left: 0;
+					bottom: 2px;
+					width: 100%;
+					height: 40%;
+					background-color: #FACF3B;
+					z-index: -1;
+
+				};
+			}
+
+
+			p{
+				position: relative;
+				float: left;
+				width: 100%;
+				@include font($pr,16px,#fff);
+				padding-left: 20px;
+
+
+				&:first-child
+				{
+					margin-top: 15px;
+				}
+
+				&:after{
+					position: absolute;
+					content: "";
+					left: 0;
+					width: 	10px;
+					height:10px;
+					background-image: url(../../img/checked.png);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					top: 50%;
+
+					-webkit-transform: translateY(-50%);
+					-moz-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					-o-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+			}
+
+		}
+
+	}
+
+}
